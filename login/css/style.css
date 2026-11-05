@@ -215,6 +215,25 @@ body {
   color: var(--color-start);
 }
 
+/* ===== Validation errors ===== */
+.input-wrap input[aria-invalid="true"] {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.input-wrap:has(input[aria-invalid="true"]) .input-icon {
+  color: #ef4444;
+}
+
+.field-error {
+  font-size: 0.8rem;
+  color: #dc2626;
+}
+
+.field-error:empty {
+  display: none;
+}
+
 /* ===== Links & remember me ===== */
 .link {
   color: var(--color-start);
