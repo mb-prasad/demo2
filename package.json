@@ -1,0 +1,13 @@
+{
+  "name": "demo2s2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sample signup and login pages",
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}
