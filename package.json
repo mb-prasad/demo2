@@ -4,7 +4,7 @@
   "private": true,
   "description": "Sample signup and login pages",
   "scripts": {
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/"
   },
   "engines": {
     "node": ">=18"
