@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add City</title>
+  <link rel="stylesheet" href="../login/css/style.css">
+  <style>
+    .city-list-section {
+      margin-top: 28px;
+    }
+
+    .city-list-section h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 10px;
+    }
+
+    .city-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .city-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      background: #f9fafb;
+      border: 1.5px solid var(--color-border);
+      border-radius: 12px;
+    }
+
+    .city-list .city-country {
+      color: var(--color-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="background" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <main class="login-card">
+    <header class="login-header">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/>
+          <circle cx="12" cy="9.5" r="2.5"/>
+        </svg>
+      </div>
+      <h1>Add city</h1>
+      <p class="subtitle">Enter a city and its country</p>
+    </header>
+
+    <form class="login-form" id="add-city-form" action="#" method="post" novalidate>
+      <div class="field">
+        <label for="city">City</label>
+        <div class="input-wrap">
+          <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/>
+            <circle cx="12" cy="9.5" r="2.5"/>
+          </svg>
+          <input type="text" id="city" name="city" placeholder="e.g. New York" autocomplete="off" required aria-describedby="city-error">
+        </div>
+        <p class="field-error" id="city-error" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="country">Country</label>
+        <div class="input-wrap">
+          <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+          </svg>
+          <input type="text" id="country" name="country" placeholder="e.g. United States" autocomplete="off" required aria-describedby="country-error">
+        </div>
+        <p class="field-error" id="country-error" role="alert"></p>
+      </div>
+
+      <button type="submit" class="btn-primary">Add city</button>
+    </form>
+
+    <section class="city-list-section" aria-labelledby="city-list-heading">
+      <h2 id="city-list-heading">Added cities</h2>
+      <ul class="city-list" id="city-list"></ul>
+    </section>
+  </main>
+
+  <script src="js/city.js"></script>
+</body>
+</html>
